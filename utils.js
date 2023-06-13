@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const { verifyKey } = require('discord-interactions');
 const keys = require('./keys');
 
-export function VerifyDiscordRequest(clientKey) {
+exports.VerifyDiscordRequest = (clientKey) => {
   return function (req, res, buf, encoding) {
     const signature = req.get('X-Signature-Ed25519');
     const timestamp = req.get('X-Signature-Timestamp');
@@ -15,7 +15,7 @@ export function VerifyDiscordRequest(clientKey) {
   };
 }
 
-export async function DiscordRequest(endpoint, options) {
+exports.DiscordRequest = async (endpoint, options) => {
   // append endpoint to root API URL
   const url = 'https://discord.com/api/v10/' + endpoint;
   // Stringify payloads
@@ -39,7 +39,7 @@ export async function DiscordRequest(endpoint, options) {
   return res;
 }
 
-export async function InstallGlobalCommands(appId, commands) {
+exports.InstallGlobalCommands = async (appId, commands) => {
   // API endpoint to overwrite global commands
   const endpoint = `applications/${appId}/commands`;
 
