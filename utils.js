@@ -1,6 +1,6 @@
-import fetch from 'node-fetch';
-import { verifyKey } from 'discord-interactions';
-import keys from './keys.js';
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+const { verifyKey } = require('discord-interactions');
+const keys = require('./keys.js');
 
 exports.VerifyDiscordRequest = (clientKey) => {
   return function (req, res, buf, encoding) {

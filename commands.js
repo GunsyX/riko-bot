@@ -1,4 +1,4 @@
-const { InstallGlobalCommands } = require('./utils.mjs');
+const { InstallGlobalCommands } = require('./utils.js');
 const keys = require('./keys.js');
 
 
