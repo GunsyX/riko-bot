@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+const fetch = require('node-fetch/lib/index.js');
 const { verifyKey } = require('discord-interactions');
 const keys = require('./keys');
 
