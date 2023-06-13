@@ -4,7 +4,7 @@ const keys = require('./keys.js');
 
 const commands = [
     {
-        name: 'owa?',
+        name: 'owa',
         description: 'check if alive',
         type: 1,
     },
