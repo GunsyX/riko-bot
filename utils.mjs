@@ -1,6 +1,6 @@
-const fetch = require('node-fetch/lib/index.js');
-const { verifyKey } = require('discord-interactions');
-const keys = require('./keys');
+import fetch from 'node-fetch';
+import { verifyKey } from 'discord-interactions';
+import keys from './keys.js';
 
 exports.VerifyDiscordRequest = (clientKey) => {
   return function (req, res, buf, encoding) {
