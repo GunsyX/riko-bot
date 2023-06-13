@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import { InstallGlobalCommands } from './utils.js';
 import keys from './keys.js';
 
