@@ -1,5 +1,5 @@
-import { InstallGlobalCommands } from './utils.js';
-import keys from './keys.js';
+const { InstallGlobalCommands } = require('./utils.js');
+const keys = require('./keys.js');
 
 
 const commands = [
