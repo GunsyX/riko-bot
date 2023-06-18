@@ -23,3 +23,7 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
     res.send('Hello Secure World!');
 });
+
+app.get('/interactions/api', (req, res) => {
+    res.send('ok');
+});
