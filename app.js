@@ -24,6 +24,6 @@ app.get('/', (req, res) => {
     res.send('Hello Secure World!');
 });
 
-app.get('/interactions/api', (req, res) => {
+app.get('/api/interactions', (req, res) => {
     res.send('ok');
 });
