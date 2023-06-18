@@ -14,3 +14,7 @@ const sslServer = https.createServer(
 sslServer.listen(3443, () => {
     console.log('Secure Server is listening on port 3443');
 });
+
+app.get('/', (req, res) => {
+    res.send('Hello Secure World!');
+});
