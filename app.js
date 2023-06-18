@@ -15,6 +15,11 @@ sslServer.listen(3443, () => {
     console.log('Secure Server is listening on port 3443');
 });
 
+app.enable('trust proxy')
+app.use((req, res, next) => {
+    req.secure ? next() : res.redirect('https://' + req.headers.host + req.url)
+})
+
 app.get('/', (req, res) => {
     res.send('Hello Secure World!');
 });
