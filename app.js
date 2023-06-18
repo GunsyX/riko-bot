@@ -18,6 +18,7 @@ sslServer.listen(3443, () => {
 app.enable('trust proxy')
 app.use((req, res, next) => {
     console.log(req.url);
+    console.log('got a request');
     req.secure ? next() : res.redirect('https://' + req.headers.host + req.url)
 })
 
